@@ -122,3 +122,14 @@ from
   users as u
   join bookings as b on u.user_id = b.user_id
   join matches as m on m.match_id = b.match_id;
+
+-- =========================================================================
+-- Query 5: Display a comprehensive list of all users and their booking IDs, ensuring that fans who have never bought a ticket are still listed.
+-- =========================================================================
+select
+  u.user_id,
+  u.full_name,
+  b.booking_id
+from
+  users as u
+  left join bookings as b on u.user_id = b.user_id;
