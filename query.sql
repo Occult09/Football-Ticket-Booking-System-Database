@@ -9,7 +9,7 @@ create database football_ticket_booking_system;
 -- =========================================================================
 -- 1. CREATE USERS TABLE
 -- =========================================================================
-CREATE TABLE Users (
+CREATE TABLE users (
     user_id serial primary key,
     full_name varchar(100) not null,
     email varchar(50) unique,
@@ -20,7 +20,7 @@ CREATE TABLE Users (
 -- =========================================================================
 -- 2. CREATE MATCHES TABLE
 -- =========================================================================
-CREATE TABLE Matches (
+CREATE TABLE matches (
     match_id serial primary key,
     fixture varchar(100) not null,
     tournament_category varchar(50) not null,
